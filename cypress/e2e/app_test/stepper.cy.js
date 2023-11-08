@@ -5,17 +5,12 @@ describe ('Stepper page', () => {
 
     it ('First test',()=> {
         cy.visit(URL.Stepper);
-        cy.get(LOCATORS.Stepper.StepContent)
-            .should('contain.text', HEADERS.StepContent1);
-        cy.get(LOCATORS.Stepper.btnNextTopBlock).click();
-        cy.get(LOCATORS.Stepper.StepContent)
-        .should('contain.text', HEADERS.StepContent2);
-            cy.get(LOCATORS.Stepper.btnNextTopBlock).click();
-        cy.get(LOCATORS.Stepper.StepContent)
-            .should('contain.text', HEADERS.StepContent3);
-        cy.get(LOCATORS.Stepper.btnNextTopBlock).click();
-        cy.get(LOCATORS.Stepper.StepContent)
-            .should('contain.text', HEADERS.StepContent4);
+        for (const key in HEADERS) {
+            if (HEADERS.hasOwnProperty(key)&& key !=='HorizontalForm' && key !=='EnterYourName') {
+              cy.get(LOCATORS.Stepper.StepContent).should('contain.text',  HEADERS[key]);
+           key !== 'StepContent4'?cy.get(LOCATORS.Stepper.btnNextTopBlock).click():"Finish"
+            }
+          }
         cy.get(LOCATORS.Stepper.btnNextTopBlock).click();  
 
     })
