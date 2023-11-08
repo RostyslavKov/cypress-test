@@ -1,7 +1,9 @@
 export const URL = {
-    Stepper: '/layout/stepper', 
-    Dialog: '/modal-overlays/dialog',
-    Layouts: '/forms/layouts',
+    Stepper: '/pages/layout/stepper', 
+    Dialog: '/pages/modal-overlays/dialog',
+    Layouts: '/pages/forms/layouts',
+    Register: '/auth/register',
+    Pages: '/pages',
 
 };
 
@@ -12,9 +14,24 @@ export const HEADERS ={
     StepContent4: 'Step content #4',
     EnterYourName: 'Enter your name',
     HorizontalForm: 'Horizontal form',
+    
 };
 
 export const DATA = {
     Email: 'test@gm.co',
     Password: 'Aa123456',
+    FullName: 'test name',
+    InvalidName: '12',
 };
+
+export const REGISTER = {
+    Register: 'Register',
+    FullName: 'Full name:',
+    EmailAddress: 'Email address:',
+    Password: 'Password:',
+    RepeatPassword: 'Repeat password:',
+    ValidationName: ' Full name should contains from 4 to 50 characters ',
+    ValidationEmail: ' Email should be the real one! ',
+    ValidationPassword: ' Password is required! ',
+    ValidationRepeatPassword: ' Password confirmation is required! ',
+}
