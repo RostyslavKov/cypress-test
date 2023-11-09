@@ -1,5 +1,8 @@
 
 export const LOCATORS = {
+    General: {
+        h1: 'h1',
+    },
     Stepper: { 
         StepContent: 'h3:eq(0)',
         btnNextTopBlock: 'button:contains("next"):eq(0)',
@@ -17,6 +20,20 @@ export const LOCATORS = {
         txtPassword: '#inputPassword3',
         chRememberMe: '.checkbox > nb-checkbox > .label > .custom-checkbox',
         btnSignIn: '.status-warning.shape-rectangle.transitions',
+    },
+    Register: {
+        lblRegisterTitle: '[id="title"]',
+        lblFullName: '[for="input-name"]',
+        txtFullName: '[id="input-name"]',
+        lblEmail: '[for="input-email"]',
+        txtEmail: '[id="input-email"]',
+        lblPassword: '[for="input-password"]',
+        txtPassword: '[id="input-password"]',
+        lblRepeatPassword: '[for="input-re-password"]',
+        txtRepeatPassword: '[id="input-re-password"]',
+        chAgree: '[class="native-input visually-hidden"]',
+        btnRegister: 'button:contains(" Register ")',
+        Socials: '.socials',
     }
     
 };
