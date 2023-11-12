@@ -4,6 +4,7 @@ export const URL = {
     Layouts: '/pages/forms/layouts',
     Register: '/auth/register',
     Pages: '/pages',
+    SmartTable: '/pages/tables/smart-table',
 
 };
 
@@ -23,6 +24,16 @@ export const DATA = {
     FullName: 'test name',
     InvalidName: '12',
 };
+
+export const TABLE = {
+    ID: '77',
+    FirstName: 'Rostyslav',
+    LastName: 'Kovalenko',
+    Username: 'Rost',
+    Email: 'test@gm.co', 
+    Age: '28',
+};
+
 
 export const REGISTER = {
     Register: 'Register',

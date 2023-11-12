@@ -12,18 +12,24 @@ context('Register page', () => {
     describe('Positive cases', () => {
         
         it('Registration', () => {
-            cy.get(LOCATORS.Register.txtFullName).type(DATA.FullName)
-                .invoke('attr', 'ng-reflect-model').should('eq', DATA.FullName);
-            cy.get(LOCATORS.Register.txtEmail).type(DATA.Email)
-                .invoke('attr', 'ng-reflect-model').should('eq', DATA.Email);
-            cy.get(LOCATORS.Register.txtPassword).type(DATA.Password)
-                .invoke('attr', 'ng-reflect-model').should('eq', DATA.Password);
-            cy.get(LOCATORS.Register.txtRepeatPassword).type(DATA.Password)
-                .invoke('attr', 'ng-reflect-model').should('eq', DATA.Password);
-            cy.get(LOCATORS.Register.chAgree).click( {force: true});
-            cy.get(LOCATORS.Register.chAgree).should('be.checked');
-            cy.get(LOCATORS.Register.btnRegister).click();
-            cy.location('pathname').should('eq', URL.Pages );
+            cy.get(LOCATORS.Register.FormDOM)
+                .within(($form) => {
+                    cy.get(LOCATORS.Register.txtFullName).type(DATA.FullName)
+                        .invoke('attr', 'ng-reflect-model')
+                        .should('eq', DATA.FullName);
+                    cy.get(LOCATORS.Register.txtEmail).type(DATA.Email)
+                        .invoke('attr', 'ng-reflect-model').should('eq', DATA.Email);
+                    cy.get(LOCATORS.Register.txtPassword).type(DATA.Password)
+                        .invoke('attr', 'ng-reflect-model').should('eq', DATA.Password);
+                    cy.get(LOCATORS.Register.txtRepeatPassword).type(DATA.Password)
+                        .invoke('attr', 'ng-reflect-model').should('eq', DATA.Password);
+                    cy.get(LOCATORS.Register.chAgree).click( {force: true});
+                    cy.get(LOCATORS.Register.chAgree).should('be.checked');
+                    cy.get(LOCATORS.Register.btnRegister).click();
+                    cy.location('pathname').should('eq', URL.Pages);
+                }
+            );
+            
     
         });
 
