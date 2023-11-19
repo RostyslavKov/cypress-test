@@ -1,4 +1,4 @@
-export const URL = {
+export const URL = Object.freeze({
     Stepper: '/pages/layout/stepper', 
     Dialog: '/pages/modal-overlays/dialog',
     Layouts: '/pages/forms/layouts',
@@ -6,8 +6,20 @@ export const URL = {
     Pages: '/pages',
     SmartTable: '/pages/tables/smart-table',
 
-};
+});
 
+export const GENERAL = {
+    Head: 'head',
+    Body: 'body',
+    FirstRow: '0',
+    SecondRow: '2',
+    Column1: '1',
+    Column2: '2',
+    Column3: '3',
+    Column4: '4',
+    Column5: '5',
+    Column6: '6',
+}
 export const HEADERS ={
     StepContent1: 'Step content #1',
     StepContent2: 'Step content #2',

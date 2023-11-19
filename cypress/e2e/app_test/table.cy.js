@@ -56,11 +56,6 @@ context('Smart table page', () => {
                 const elemsAsString = elems.map(String);
                 expect(elemsAsString).to.include.members(valuesToVerify);
             });
-
-        });
-
-    });
-
-    
-
+        })
+    })
 })
